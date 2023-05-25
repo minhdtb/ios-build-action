@@ -13,6 +13,9 @@ platform :ios do
       keychain_name = 'ios-build.keychain'
     end
 
+    # make sure the keychain is always removed.
+    delete_keychain(name: keychain_name)
+
     create_keychain(
       name: keychain_name,
       password: keychain_password,
