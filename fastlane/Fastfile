@@ -14,7 +14,10 @@ platform :ios do
     end
 
     # make sure the keychain is always removed.
-    delete_keychain(name: keychain_name)
+    begin
+      delete_keychain(name: keychain_name)
+    rescue
+    end
 
     create_keychain(
       name: keychain_name,
