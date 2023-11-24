@@ -62,7 +62,7 @@ platform :ios do
       )
     end
 
-    @profiles.each { |profile| install_provisioning_profile(path: profile) }
+    # @profiles.each { |profile| install_provisioning_profile(path: profile) }
 
     update_targets = nil
     if !ENV['UPDATE_TARGETS'].empty?
