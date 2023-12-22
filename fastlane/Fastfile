@@ -214,8 +214,8 @@ platform :ios do
           nil
         end,
       export_method: ENV['EXPORT_METHOD'],
-      # export_options: use_export_options ? ENV['EXPORT_OPTIONS'] : nil,
-      skip_profile_detection: use_export_options,
+      export_options: nil,
+      skip_profile_detection: true,
       sdk: use_build_sdk ? ENV['BUILD_SDK'] : nil,
       destination: use_build_destination ? ENV['BUILD_DESTINATION'] : nil,
       build_path: use_build_path ? ENV['BUILD_PATH'] : nil
